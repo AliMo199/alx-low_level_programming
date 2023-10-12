@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_square - prints a square, followed by a \n
+ * print_square - prints a square, followed by a new line;
  * @size: size of the square
  */
 void print_square(int size)
@@ -11,10 +11,11 @@ void print_square(int size)
 		_putchar('\n');
 	} else
 	{
+		int i, j;
 
-		for (int i = 0; i < size; i++)
+		for (i = 0; i < size; i++)
 		{
-			for (int j = 0; j < size; j++)
+			for (j = 0; j < size; j++)
 			{
 				_putchar('#');
 			}
