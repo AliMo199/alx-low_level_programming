@@ -7,21 +7,21 @@
 void hash_table_delete(hash_table_t *ht)
 {
 	hash_table_t *head = ht;
-	hash_node_t *node, *tmpl;
-	unsigned long int i;
+	hash_node_t *node, *tmp;
+	unsigned long int j;
 
-	for (i = 0; i < ht->size; i++)
+	for (j = 0; j < ht->size; j++)
 	{
-		if (ht->array[i] != NULL)
+		if (ht->array[j] != NULL)
 		{
-			node = ht->array[i];
+			node = ht->array[j];
 			while (node != NULL)
 			{
-				tmpl = node->next;
+				tmp = node->next;
 				free(node->key);
 				free(node->value);
 				free(node);
-				node = tmpl;
+				node = tmp;
 			}
 		}
 	}
